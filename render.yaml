@@ -1,0 +1,31 @@
+services:
+  - type: web
+    name: asyl-edvibe-backend
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: ADMIN_USER
+        value: "your_admin_username"
+      - key: ADMIN_PASS
+        value: "your_admin_password"
+      - key: SESSION_SECRET
+        value: "your_session_secret"
+      - key: NODE_ENV
+        value: "production"
+    plan: starter
+    repo: https://github.com/Asyl-AI1/Asyl-Edvibe-Worksheets
+    rootDir: backend
+
+  - type: static
+    name: asyl-edvibe-frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    repo: https://github.com/Asyl-AI1/Asyl-Edvibe-Worksheets
+    rootDir: frontend
+
+# Checklist for Render:
+# - Create two services: backend (Web Service), frontend (Static Site)
+# - Set all environment variables for backend
+# - Use build/start commands per above
+# - For Docker deploy: use backend/Dockerfile and set up as single Web Service

@@ -1,0 +1,22 @@
+{
+  "name": "asyl-edvibe-frontend",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite",
+    "start": "vite preview",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.14.2",
+    "pdfjs-dist": "^3.11.174",
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "vite": "^4.4.9",
+    "tailwindcss": "^3.3.2",
+    "postcss": "^8.4.27",
+    "autoprefixer": "^10.4.14"
+  }
+}
